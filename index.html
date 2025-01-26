@@ -10,8 +10,30 @@
   <link rel="stylesheet" href="src/styles/index.css">
 </head>
 <body>
-  <div class="app-name">
-    <img src="src/assets/logo.svg" alt="">
-  </div>
+  <header>
+    <div class="app-name">
+      <img src="src/assets/logo.svg" alt="">
+    </div>
+  </header>
+
+  <main>
+    <section id="agenda">
+      <div class="container">
+        <form class="form">
+          <header> 
+              <h1 class="title">Sua agenda</h1>
+              <p class="paragraph-medium">
+                Aqui você pode ver todos os clientes e serviços agendados para hoje.
+              </p>
+          </header>
+
+          <div class="input-wrapper">
+            <i><img src="src/assets/calendar.svg" alt="Icone de calendário"></i>
+            <input type="date" name="date" id="date" required>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
