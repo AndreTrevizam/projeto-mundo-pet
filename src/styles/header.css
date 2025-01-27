@@ -6,3 +6,7 @@ header {
     border-bottom-right-radius: .75rem;
   }
 }
+
+#agenda {
+  margin-top: .875rem;
+}

@@ -2,9 +2,8 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: .75rem 1.25rem;
+  padding-inline: 20px;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 .title {
@@ -61,11 +60,20 @@
   font-weight: 500;
   font-family: var(--ff-inter);
   color: var(--content-tertiary);
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--content-primary);
+    text-decoration: underline;
+  }
 }
+
+
 
 @media (min-width: 376px) {
   .container {
-    padding: 5rem;
+    padding-inline: 5rem;
     max-width: 871px;
   }
 }
