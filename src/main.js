@@ -7,3 +7,6 @@ import "./styles/header.css"
 import "./styles/main.css"
 import "./styles/modal.css"
 import "./styles/utility.css"
+
+// JS
+import "./modules/modal/modal.js"
