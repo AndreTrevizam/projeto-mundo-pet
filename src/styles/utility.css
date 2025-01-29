@@ -69,7 +69,7 @@
   }
 }
 
-& .button {
+.button {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 700;
@@ -113,6 +113,10 @@
     cursor: pointer;
     background: url(../assets/arrow-down.svg) no-repeat;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 376px) {
