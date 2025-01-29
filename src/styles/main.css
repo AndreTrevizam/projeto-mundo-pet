@@ -31,26 +31,6 @@ footer {
   padding-block: 20px;
   margin-top: 2.75rem;
   background-color: #23242C;
-
-  & button {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 700;
-    font-family: var(--ff-inter);
-    padding: .75rem 1.5rem;
-    border-radius: .5rem;
-    border: none;
-    background-color: var(--content-brand);
-    text-transform: uppercase;
-    color: #050505;
-    cursor: pointer;
-    transition: .3s;
-    box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
-
-    &:hover {
-      background-color: var(--background-highlights);
-    }
-  }
 }
 
 @media (min-width: 376px) {

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
   <title>Mundo Pet</title>
   <link rel="stylesheet" href="src/styles/index.css">
 </head>
+
 <body>
   <header>
     <div class="app-name">
@@ -20,14 +24,14 @@
     <section id="agenda">
       <div class="container">
         <form class="form-date">
-          <header> 
-              <h1 class="title">Sua agenda</h1>
-              <p class="paragraph-medium">
-                Aqui você pode ver todos os clientes e serviços agendados para hoje.
-              </p>
+          <header>
+            <h1 class="title">Sua agenda</h1>
+            <p class="paragraph-medium">
+              Aqui você pode ver todos os clientes e serviços agendados para hoje.
+            </p>
           </header>
 
-          <div class="input-wrapper">
+          <div class="date-picker">
             <i><img src="src/assets/calendar.svg" alt="Icone de calendário"></i>
             <input type="date" name="date" id="date" required>
           </div>
@@ -41,7 +45,7 @@
           <header>
             <div>
               <img src="src/assets/sun.svg" alt="Icone de sol">
-              <strong class="label-large">Manhã</strong> 
+              <strong class="label-large">Manhã</strong>
             </div>
             <span class="label-large">09h-12h</span>
           </header>
@@ -64,7 +68,7 @@
           <header>
             <div>
               <img src="src/assets/afternoon.svg" alt="Tarde">
-              <strong class="label-large">Tarde</strong> 
+              <strong class="label-large">Tarde</strong>
             </div>
             <span class="label-large">13h-18h</span>
           </header>
@@ -87,7 +91,7 @@
           <header>
             <div>
               <img src="src/assets/night.svg" alt="Noite">
-              <strong class="label-large">Noite</strong> 
+              <strong class="label-large">Noite</strong>
             </div>
             <span class="label-large">19h-21h</span>
           </header>
@@ -111,8 +115,75 @@
 
   <footer>
     <form class="new-schedule">
-      <button type="submit">Novo agendamento</button>
+      <button type="submit" class="button">Novo agendamento</button>
     </form>
   </footer>
+
+  <div id="modal" class="hidden">
+    <div class="modal-content">
+      <span class="close-button">
+        <img src="src/assets/close-button.svg" alt="">
+      </span>
+      <div class="title-info">
+        <h1 class="title">Agende um atendimento</h1>
+        <p class="paragraph-medium">Preencha os dados do cliente para realizar o agendamento:</p>
+      </div>
+
+      <form class="new-schedule-form">  
+        <label for="client-name">Nome do tutor</label>
+        <div class="input-wrapper">
+          <i><img src="src/assets/person.svg" alt=""></i>
+          <input type="text" id="client-name" name="client-name" required placeholder="Helena Souza">
+        </div>
+
+        <label for="pet-name">Nome do pet</label>
+        <div class="input-wrapper">
+          <i><img src="src/assets/pet-paw.svg" alt="Icone de pata"></i>
+          <input type="text" id="pet-name" name="pet-name" required placeholder="Cheddar">
+        </div>
+
+        <label for="phone-number">Telefone</label>
+        <div class="input-wrapper">
+          <i><img src="src/assets/phone.svg" alt="Icone de telefone"></i>
+          <input type="text" id="phone-number" name="phone-number" required placeholder="(00) 0 0000-0000">
+        </div>
+
+        <label for="service-name">Descrição do serviço</label>
+        <div class="input-wrapper">
+          <textarea name="service-name" id="service-name" required placeholder="Banho e tosa"></textarea>
+        </div>
+
+        <label for="date-modal">Data</label>
+        <div class="date-picker">
+          <i><img src="src/assets/calendar.svg" alt="Icone de calendário"></i>
+          <input type="date" name="date" id="date" required>
+        </div>
+
+
+        <label for="hour">Hora</label>
+        <div class="input-wrapper">
+          <i><img src="src/assets/clock.svg" alt="Icone de relogio"></i>
+          <select name="hour" id="hour">
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+          </select>
+        </div>
+
+        <button type="submit" class="button">Agendar</button>
+      </form>
+    </div>
+  </div>
 </body>
+
 </html>

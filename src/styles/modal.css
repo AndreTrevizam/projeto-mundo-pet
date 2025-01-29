@@ -1,0 +1,110 @@
+#modal {
+  max-width: 21.875rem;
+  background-color: var(--background-tertiary);
+  padding-inline: 1.25rem;
+  border-radius: .75rem;
+  padding-bottom: 2.5rem;
+
+  & .modal-content {
+    & .close-button {
+      display: flex;
+      justify-content: flex-end;
+      padding: .5rem;
+
+      & img {
+        cursor: pointer;
+      }
+    }
+
+    .title-info {
+      margin-bottom: 1.75rem;
+    }
+
+    & label {
+      font-size: .875rem;
+      line-height: 1.5rem;
+      font-weight: 700;
+      font-family: var(--ff-inter);
+      color: var(--content-primary);
+    }
+
+    .input-wrapper {
+      border: 1px solid var(--border-primary);
+      border-radius: .5rem;
+      padding: .75rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      & input {
+        border: none;
+        background-color: transparent;
+        color: var(--content-primary);
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & textarea {
+        background-color: transparent;
+        border: none;
+        color: var(--content-primary);
+        resize: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & select {
+        appearance: none; /* Remove o estilo padrão do navegador */
+        -webkit-appearance: none; /* Suporte para WebKit */
+        -moz-appearance: none; /* Suporte para Firefox */
+        color: #767676;
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+
+    }
+
+    & .date-picker {
+      width: 100%;
+      padding: 0;
+      padding: .75rem;
+
+      & ::-webkit-calendar-picker-indicator {
+        margin-left: 6.25rem;
+      }
+    }
+
+    & .new-schedule-form {
+      display: grid;
+      gap: .5rem;
+      font-family: var(--ff-inter);
+    }
+
+    & .button {
+      margin-top: 2rem;
+      display: flex;
+      justify-self: end;
+      width: 7.688rem;
+    }
+  }
+}
+
+@media (min-width: 376px) {
+  #modal {
+    max-width: 29.813rem;
+    padding-inline: 2.5rem;
+
+    & .modal-content {
+      & .date-picker {
+        & ::-webkit-calendar-picker-indicator {
+          margin-left: 13rem;
+        }
+      }
+    }
+  }
+}
