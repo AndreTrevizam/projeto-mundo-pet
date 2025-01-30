@@ -1,3 +1,11 @@
 {
-  "schedules": []
+  "schedules": [
+    {
+      "id": "1738263435966",
+      "clientName": "André",
+      "petName": "Lili",
+      "service": "banho",
+      "when": "2025-01-30T12:00:00.000Z"
+    }
+  ]
 }

@@ -1,5 +1,8 @@
 "use strict"
 
+// Configuração do dayjs
+import "./libs/dayjs.js"
+
 // CSS
 import "./styles/form.css"
 import "./styles/global.css"
@@ -10,3 +13,6 @@ import "./styles/utility.css"
 
 // JS
 import "./modules/modal/modal.js"
+import "./modules/form/submit.js"
+import "./modules/hours-load.js"
+import "./services/schedule-new.js"

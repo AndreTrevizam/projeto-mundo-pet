@@ -113,9 +113,10 @@
   </main>
 
   <footer>
-    <button type="submit" class="button">Novo agendamento</button>
+    <button type="submit" class="button" id="new-schedule-btn">Novo agendamento</button>
   </footer>
 
+  <div id="modal-overlay" class="hidden"></div>
   <div id="modal" class="hidden">
     <div class="modal-content">
       <span class="close-button">
@@ -153,14 +154,15 @@
         <label for="date-modal">Data</label>
         <div class="date-picker">
           <i><img src="src/assets/calendar.svg" alt="Icone de calendário"></i>
-          <input type="date" name="date" id="date" required>
+          <input type="date" name="date-modal" id="date-modal" required>
         </div>
 
 
-        <label for="hour">Hora</label>
+        <label for="hours">Hora</label>
         <div class="input-wrapper">
           <i><img src="src/assets/clock.svg" alt="Icone de relogio"></i>
-          <select name="hour" id="hour">
+          <select name="hours" id="hours">
+            <!--
             <option value="09:00">09:00</option>
             <option value="10:00">10:00</option>
             <option value="11:00">11:00</option>
@@ -174,6 +176,7 @@
             <option value="19:00">19:00</option>
             <option value="20:00">20:00</option>
             <option value="21:00">21:00</option>
+            -->
           </select>
         </div>
 
