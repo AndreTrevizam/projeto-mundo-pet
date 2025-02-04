@@ -53,7 +53,7 @@ formNewSchedule.onsubmit = async (event) => {
     const [hour] = hourSelect.value.split(":")
 
     // Insere a hora na data
-    const when = dayjs(dateNewSchedule.value).add(hour, "hour")
+    const when = dayjs.utc(dateNewSchedule.value).add(hour, "hour")
     
     // Gera ID
     const id = new Date().getTime().toString()
@@ -71,7 +71,6 @@ formNewSchedule.onsubmit = async (event) => {
     // Limpa os inputs
     formNewSchedule.reset()
     
-
   } catch (error) {
     console.log(error)
   }
