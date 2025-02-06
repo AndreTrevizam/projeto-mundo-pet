@@ -1,53 +1,32 @@
 {
   "schedules": [
     {
-      "id": "1738263435966",
+      "id": "1738869670452",
       "clientName": "André",
       "petName": "Lili",
-      "service": "banho",
-      "when": "2025-01-30T12:00:00.000Z"
+      "service": "asdasdasd",
+      "when": "2025-02-06T15:00:00.000Z"
     },
     {
-      "id": "1738690036286",
+      "id": "1738872126647",
+      "clientName": "André",
+      "petName": "Lili",
+      "service": "asdasd",
+      "when": "2025-02-06T09:00:00.000Z"
+    },
+    {
+      "id": "1738873167099",
       "clientName": "Ray",
       "petName": "Frederico",
-      "service": "banho",
-      "when": "2025-02-05T12:00:00.000Z"
+      "service": "aaaaaa",
+      "when": "2025-02-06T18:00:00.000Z"
     },
     {
-      "id": "1738690732046",
-      "clientName": "André",
-      "petName": "Lili",
-      "service": "njjk",
-      "when": "2025-02-05T21:00:00.000Z"
-    },
-    {
-      "id": "1738690761718",
-      "clientName": "Ray",
-      "petName": "Bob",
-      "service": "asddas",
-      "when": "2025-02-06T20:00:00.000Z"
-    },
-    {
-      "id": "1738691436549",
+      "id": "1738873921365",
       "clientName": "Dedeko",
-      "petName": "Lra",
-      "service": "tosa",
-      "when": "2025-02-08T19:00:00.000Z"
-    },
-    {
-      "id": "1738691501060",
-      "clientName": "asdasd",
-      "petName": "Frederico",
-      "service": "ççç",
-      "when": "2025-02-04T16:00:00.000Z"
-    },
-    {
-      "id": "1738691789036",
-      "clientName": "André",
-      "petName": "Lili",
-      "service": "dsa",
-      "when": "2025-02-21T13:00:00.000Z"
+      "petName": "Bob",
+      "service": "adsdas",
+      "when": "2025-02-06T20:00:00.000Z"
     }
   ]
 }

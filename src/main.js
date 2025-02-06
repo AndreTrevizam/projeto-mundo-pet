@@ -14,6 +14,7 @@ import "./styles/utility.css"
 // JS
 import "./modules/modal/modal.js"
 import "./modules/form/submit.js"
-import "./modules/hours-load.js"
+import "./modules/form/hours-load.js"
 import "./services/schedule-new.js"
 import "./modules/form/day-picker.js"
+import "./services/load-schedules.js"
