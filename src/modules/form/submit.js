@@ -1,5 +1,8 @@
 const dayjs = require("dayjs")
-import {scheduleNew} from "../../services/schedule-new"
+import { scheduleNew } from "../../services/schedule-new"
+import { schedulesDay } from "../../modules/schedule-load.js"
+import { closeModal } from "../modal/modal.js"
+import { loadHours } from "../form/hours-load.js"
 
 const formNewSchedule = document.querySelector(".new-schedule-form")
 const dateNewSchedule = document.getElementById("date-modal")
@@ -10,7 +13,7 @@ const hourSelect = document.getElementById("hours")
 const services = document.getElementById("service-name")
 
 // Carrega a data atual
-const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
+export const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
 
 // Define a data minima como sendo a data atual
 dateNewSchedule.value = inputToday
@@ -24,28 +27,29 @@ numberPhone.oninput = () => {
 
 formNewSchedule.onsubmit = async (event) => {
   event.preventDefault()
-
+  
   try {
+
     // Nome do cliente
     const clientName = nameClient.value.trim()
-    if(!clientName) {
+    if (!clientName) {
       return alert("Informe o nome do cliente!")
     }
 
     // Nome do pet
     const petName = namePet.value.trim()
-    if(!petName) {
+    if (!petName) {
       return alert("Informe o nome do pet!")
     }
 
     // Numero de telefone
     const phoneValue = numberPhone.value.trim()
-    if(!phoneValue) {
+    if (!phoneValue) {
       return alert("Informe o número de telefone do cliente!")
     }
 
     const service = services.value.trim()
-    if(!service) {
+    if (!service) {
       return alert("Informe o serviço a ser realizado!")
     }
 
@@ -54,7 +58,7 @@ formNewSchedule.onsubmit = async (event) => {
 
     // Insere a hora na data
     const when = dayjs.utc(dateNewSchedule.value).add(hour, "hour")
-    
+
     // Gera ID
     const id = new Date().getTime().toString()
 
@@ -70,7 +74,15 @@ formNewSchedule.onsubmit = async (event) => {
 
     // Limpa os inputs
     formNewSchedule.reset()
-    
+
+    // Atualiza a lista
+    await schedulesDay()
+
+    // Fechar o modal
+    closeModal()
+
+    loadHours(dateNewSchedule.value)
+
   } catch (error) {
     console.log(error)
   }

@@ -14,3 +14,9 @@ closeModalBtn.addEventListener("click", () => {
   modal.classList.add("hidden")
   document.body.style.overflow = ""
 })
+
+export function closeModal() {
+  overlay.classList.add("hidden")
+  modal.classList.add("hidden")
+  document.body.style.overflow = ""
+}

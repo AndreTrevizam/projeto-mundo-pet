@@ -5,15 +5,22 @@ const periodMorning = document.getElementById("period-morning")
 const periodAfternoon = document.getElementById("period-afternoon")
 const periodNight = document.getElementById("period-night")
 
-export function loadSchedules({dailySchedules}) {
+export function loadSchedules({ dailySchedules }) {
   try {
     // Limpo as listas
     periodMorning.innerHTML = ""
     periodAfternoon.innerHTML = ""
     periodNight.innerHTML = ""
 
+    // Ordena os agendamentos por horário (crescente)
+    const sortedSchedules = dailySchedules.sort((a, b) => {
+      const hourA = dayjs.utc(a.when).hour();
+      const hourB = dayjs.utc(b.when).hour();
+      return hourA - hourB; // Ordena em ordem crescente
+    });
 
-    dailySchedules.forEach((schedule => {
+
+    sortedSchedules.forEach((schedule => {
       // Cria os elementos dinamicamente
       const li = document.createElement("li")
       const div = document.createElement("div")
@@ -41,11 +48,11 @@ export function loadSchedules({dailySchedules}) {
 
       // Nova hora para comparar e alocar na seção correta
       const hourUl = dayjs.utc(schedule.when).hour()
-      
+
       // Adiciona os elementos dentro da div e a div dentro da li
       div.append(hour, petName, clientName)
       li.append(div, service, remove)
-      
+
       // Verificação para alocar os itens nas seções corretas
       if (hourUl >= 9 && hourUl <= 12) {
         periodMorning.append(li)
@@ -55,6 +62,25 @@ export function loadSchedules({dailySchedules}) {
         periodNight.append(li)
       }
     }))
+
+    // Adiciona a classe "empty-list" se a lista estiver vazia
+    if (periodMorning.children.length === 0) {
+      periodMorning.classList.add("empty-list");
+    } else {
+      periodMorning.classList.remove("empty-list");
+    }
+
+    if (periodAfternoon.children.length === 0) {
+      periodAfternoon.classList.add("empty-list");
+    } else {
+      periodAfternoon.classList.remove("empty-list");
+    }
+
+    if (periodNight.children.length === 0) {
+      periodNight.classList.add("empty-list");
+    } else {
+      periodNight.classList.remove("empty-list");
+    }
 
   } catch (error) {
     console.log(error)

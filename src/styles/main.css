@@ -4,6 +4,10 @@
     margin-top: 2rem;
     border-radius: 0.625rem;
 
+    & .empty-list {
+      height: 3.5rem;
+    }
+
     & header {
       display: flex;
       align-items: center;
@@ -30,7 +34,6 @@ footer {
   align-items: center;
   padding-block: 20px;
   margin-top: 2.75rem;
-  background-color: #23242C;
 }
 
 @media (min-width: 376px) {
@@ -45,7 +48,6 @@ footer {
   }
 
   & footer {
-    background: none;
     justify-content: flex-end;
     
     & button {
