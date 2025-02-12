@@ -1,25 +1,3 @@
 {
-  "schedules": [
-    {
-      "id": "1739397454085",
-      "clientName": "André",
-      "petName": "Lili",
-      "service": "Banho",
-      "when": "2025-02-12T13:00:00.000Z"
-    },
-    {
-      "id": "1739397488971",
-      "clientName": "Jorge",
-      "petName": "Cheddar",
-      "service": "Tosa",
-      "when": "2025-02-12T10:00:00.000Z"
-    },
-    {
-      "id": "1739397517607",
-      "clientName": "Sergio",
-      "petName": "Hina",
-      "service": "Vacinas",
-      "when": "2025-02-12T20:00:00.000Z"
-    }
-  ]
+  "schedules": []
 }
