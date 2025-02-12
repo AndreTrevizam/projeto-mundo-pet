@@ -9,7 +9,6 @@ document.getElementById('date').addEventListener('change', async function() {
 
   try {
     const dailySchedules = await scheduleGetByDay({date})
-    console.log(dailySchedules)
 
     loadSchedules({dailySchedules})
 
